@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Update an existing file - Documentation for Mozilla l10n Drivers</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../products/android-l10n/index.html"><strong aria-hidden="true">2.</strong> Android-l10n</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../products/android-l10n/adding_new_locales.html"><strong aria-hidden="true">2.1.</strong> Adding new locales</a></li><li class="chapter-item expanded "><a href="../../products/android-l10n/removing_projects.html"><strong aria-hidden="true">2.2.</strong> Removing projects</a></li></ol></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/index.html"><strong aria-hidden="true">3.</strong> Firefox Desktop</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../products/firefox_desktop/adding_pontoon.html"><strong aria-hidden="true">3.1.</strong> Add to Pontoon</a></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/adding_nightly.html"><strong aria-hidden="true">3.2.</strong> Nightly builds</a></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/adding_release.html"><strong aria-hidden="true">3.3.</strong> Beta/Release builds</a></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/removing_locales.html"><strong aria-hidden="true">3.4.</strong> Removing locales</a></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/fluent_migrations.html"><strong aria-hidden="true">3.5.</strong> Fluent migrations</a></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/build_system.html"><strong aria-hidden="true">3.6.</strong> Build system</a></li><li class="chapter-item expanded "><a href="../../products/firefox_desktop/firefox_l10n_faqs.html"><strong aria-hidden="true">3.7.</strong> L10N FAQs</a></li></ol></li><li class="chapter-item expanded "><a href="../../localization/index.html"><strong aria-hidden="true">4.</strong> Localization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../localization/making_string_changes.html"><strong aria-hidden="true">4.1.</strong> Change existing strings</a></li></ol></li><li class="chapter-item expanded "><a href="../../products/review/index.html"><strong aria-hidden="true">5.</strong> Review</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../products/review/review.html"><strong aria-hidden="true">5.1.</strong> Review strings</a></li></ol></li><li class="chapter-item expanded "><a href="../../products/firefox_iOS/index.html"><strong aria-hidden="true">6.</strong> Firefox for iOS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../products/firefox_iOS/review_iOSstrings.html"><strong aria-hidden="true">6.1.</strong> Reviewing new strings</a></li></ol></li><li class="chapter-item expanded "><a href="../../products/mozilla_org/index.html"><strong aria-hidden="true">7.</strong> Mozilla.org</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../products/mozilla_org/extract_strings.html"><strong aria-hidden="true">7.1.</strong> Process overview</a></li><li class="chapter-item expanded "><a href="../../products/mozilla_org/working_bedrock.html"><strong aria-hidden="true">7.2.</strong> Working with Bedrock</a></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/import_translations.html"><strong aria-hidden="true">7.3.</strong> Importing translations</a></li><li class="chapter-item expanded "><a href="../../products/mozilla_org/updating_mozillaorg_production.html"><strong aria-hidden="true">7.4.</strong> Updating production</a></li><li class="chapter-item expanded "><a href="../../products/mozilla_org/enable_production.html"><strong aria-hidden="true">7.5.</strong> New locales</a></li></ol></li><li class="chapter-item expanded "><a href="../../products/other/index.html"><strong aria-hidden="true">8.</strong> Other Projects</a></li><li class="chapter-item expanded "><a href="../../products/searchplugins/setup_searchplugins.html"><strong aria-hidden="true">9.</strong> Searchplugins</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/index.html"><strong aria-hidden="true">10.</strong> Pontoon</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tools/pontoon/adding_new_project.html"><strong aria-hidden="true">10.1.</strong> New project</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/adding_new_short_term_project.html"><strong aria-hidden="true">10.2.</strong> New short-term project</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/adding_new_locale.html"><strong aria-hidden="true">10.3.</strong> New locale</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/sending_notifications.html"><strong aria-hidden="true">10.4.</strong> Notifications</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/renaming_a_file.html"><strong aria-hidden="true">10.5.</strong> Renaming a localization file</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/deactivating_users.html"><strong aria-hidden="true">10.6.</strong> Deactivating users</a></li><li class="chapter-item expanded "><a href="../../tools/pontoon/removing_users.html"><strong aria-hidden="true">10.7.</strong> Removing users</a></li></ol></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/index.html"><strong aria-hidden="true">11.</strong> Web dashboards</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tools/webdashboards/langchecker.html"><strong aria-hidden="true">11.1.</strong> Langchecker</a></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/bootstrap_new_locale.html"><strong aria-hidden="true">11.2.</strong> Bootstrap a new locale</a></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/add_locales.html"><strong aria-hidden="true">11.3.</strong> Add locales to an existing file</a></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/update_existing_file.html" class="active"><strong aria-hidden="true">11.4.</strong> Update an existing file</a></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/remove_obsolete_files.html"><strong aria-hidden="true">11.5.</strong> Remove obsolete files</a></li><li class="chapter-item expanded "><a href="../../tools/webdashboards/add_new_file.html"><strong aria-hidden="true">11.6.</strong> Add a new file to an existing project</a></li></ol></li><li class="chapter-item expanded "><a href="../../tools/mercurial/index.html"><strong aria-hidden="true">12.</strong> Mercurial</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tools/mercurial/setting_mercurial_environment.html"><strong aria-hidden="true">12.1.</strong> Set up the environment</a></li><li class="chapter-item expanded "><a href="../../tools/mercurial/creating_mercurial_patch.html"><strong aria-hidden="true">12.2.</strong> Create a patch</a></li><li class="chapter-item expanded "><a href="../../tools/mercurial/useful_mercurial_commands.html"><strong aria-hidden="true">12.3.</strong> Useful Mercurial commands</a></li></ol></li><li class="chapter-item expanded "><a href="../../misc/index.html"><strong aria-hidden="true">13.</strong> Other docs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../misc/creating_new_repository.html"><strong aria-hidden="true">13.1.</strong> New l10n repository</a></li><li class="chapter-item expanded "><a href="../../misc/working_w_l10n_agency.html"><strong aria-hidden="true">13.2.</strong> How to work with a Localization Agency</a></li><li class="chapter-item expanded "><a href="../../misc/documentation_styleguide.html"><strong aria-hidden="true">13.3.</strong> Documentation styleguide</a></li><li class="chapter-item expanded "><a href="../../misc/stock_emails.html"><strong aria-hidden="true">13.4.</strong> Stock emails</a></li><li class="chapter-item expanded "><a href="../../config/setup_l10ndrivers_vm.html"><strong aria-hidden="true">13.5.</strong> L10n-drivers VM setup</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Documentation for Mozilla l10n Drivers</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#update-an-existing-file" id="update-an-existing-file">Update an existing file</a></h1>
+<p>This task can be split into smaller tasks:</p>
+<ul>
+<li>Add the new strings to the reference file (typically en-US).</li>
+<li>Update the deadline (optional).</li>
+<li>Update the file for all locales adding the new strings.</li>
+</ul>
+<h2><a class="header" href="#add-the-new-strings-to-the-reference-file" id="add-the-new-strings-to-the-reference-file">Add the new strings to the reference file</a></h2>
+<p>Edit the reference file and add new strings as needed.</p>
+<p>If you’re adding a string behind a tag, always remember to bind the new string to the tag and to add the tag itself to the beginning of the file. <a href="../../products/mozilla_org/working_bedrock.html">Working with Bedrock</a> has more details about it.</p>
+<p>Always check the diff after completing, to make sure you’re not introducing unwanted changes. If you’re using the l10n-drivers virtual machine, you can use <code>trunkst</code> to move to the mozilla.org trunk folder and check the status (<code>git status</code>) and diff (<code>git diff</code>).</p>
+<p>Also double check the <a href="https://l10n.mozilla-community.org/langchecker/?action=errors">Errors View</a>, since it will warn if you’re introducing a duplicated string in the same file.</p>
+<h2><a class="header" href="#update-the-deadline" id="update-the-deadline">Update the deadline</a></h2>
+<p>If the file has a deadline set, you normally need to update it (e.g. plus 2 weeks from the the update).</p>
+<p>Search for the filename in <a href="https://github.com/mozilla-l10n/langchecker/blob/master/app/config/sources.inc.php">app/config/sources.inc.php</a> and simply update the date associated to this file respecting the format <code>YEAR-MM-DD</code>.</p>
+<h2><a class="header" href="#update-the-file-for-all-locales" id="update-the-file-for-all-locales">Update the file for all locales</a></h2>
+<p>At this point you need to run <code>lang_update</code> to propagate the update to all locales. Assuming that the file is called <code>mozorg/contribute/signup.lang</code>, run:</p>
+<pre><code class="language-BASH">$ lang_update mozorg/contribute/signup.lang 0 all
+</code></pre>
+<p>This line updates <code>mozorg/contribute/signup.lang</code>, for website <code>0</code> (mozilla.org), for <strong>all</strong> locales.</p>
+<p>Move in the l10n repository (remember the <code>trunkst</code> shortcut) and spot check at least a couple of locales. For example, to check <code>fr</code>, run <code>git diff fr</code>. <strong>IMPORTANT</strong>: never run just <code>git diff</code>, otherwise you’ll get the diff for over a hundred locales.</p>
+<p>After checking that everything looks correct, commit (notice the <code>-a</code>parameter to commit all changed files already tracked).</p>
+<pre><code class="language-BASH">$ trunkst
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+	(list of all locales and files added)
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+
+$ git commit -a -m &quot;Add new strings to mozorg/contribute/signup.lang&quot;
+$ git push
+</code></pre>
+<p>Make sure to check the commit on GitHub after pushing, especially to verify if the commit included any unwanted change.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../tools/webdashboards/add_locales.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../tools/webdashboards/remove_obsolete_files.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../tools/webdashboards/add_locales.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../tools/webdashboards/remove_obsolete_files.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
